@@ -1,0 +1,29 @@
+service: marvel
+
+app: marvel
+org: tpiros
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  # To restrict access use the following few lines, adding the right IP address(es)
+  # resourcePolicy:
+  #   - Effect: Allow
+  #     Principal: "*"
+  #     Action: execute-api:Invoke
+  #     Resource:
+  #       - execute-api:/*/*/*
+  #     Condition:
+  #       IpAddress:
+  #         aws:SourceIp:
+  #           - "1.1.1.1"
+  #           - "2.2.2.2"
+
+functions:
+  hello:
+    handler: handler.characters
+    events:
+      - http:
+          path: characters
+          method: post
+          cors: true

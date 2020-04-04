@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="Tamas Piros">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="app.js"></script>
+</head>
+
+<body style="background: linear-gradient(90deg, #ffe600 0%, #ff0000 100%)">
+  <div class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-2 text-black">
+        Serverless 💙 Marvel
+      </h2>
+      <h3 class="text-2xl mb-8 text-black-200">
+       A serverless example for the Jamstack.
+      </h3>
+      <form class="bg-none shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-black text-xl font-bold mb-2" for="character">
+            Marvel Character
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline" id="character" type="text" placeholder="Captain America">
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-red-700 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="button" id="submit">
+            Search
+          </button>
+        </div>
+      </form>
+      <div id="results" class="bg-none shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

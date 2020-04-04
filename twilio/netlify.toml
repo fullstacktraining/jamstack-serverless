@@ -1,0 +1,6 @@
+# You can also set environment variables via netlify.toml
+# https://docs.netlify.com/configure-builds/file-based-configuration/#inject-environment-variable-values
+[build]
+  command = "eleventy"
+  functions = "functions"
+  publish = "_site"
